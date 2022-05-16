@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+	  
+      <script type="application/javascript">document.interestCohort = null;</script>
       <meta charset="utf-8">
       <title>Casos|COVID-19</title>
 
@@ -75,13 +77,10 @@
                 zoom: 6
             });
 
-          L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-            //attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="http://mapbox.com">Mapbox</a>',
-            id: 'mapbox.light',
-            maxzoom: 4,
-            minzoom: 4,
-            accessToken: 'pk.eyJ1IjoiY3VyZW1hbmdvIiwiYSI6ImNpcTQ4cGFwbDAxbmVmd25vZGNiOTVzeGEifQ.GWZByYkIft6eMRha69C8nw'
-          }).addTo(map);
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+         }).addTo(map);
+	   
 		  
 		  map.attributionControl.addAttribution('Número de casos: &copy; <a href="https://covid19.min-saude.pt/">Direção-Geral da Saúde</a>');
 		  
